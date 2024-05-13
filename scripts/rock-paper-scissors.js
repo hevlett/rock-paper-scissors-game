@@ -49,12 +49,10 @@ let score = JSON.parse(localStorage.getItem('score')) ?? { win: 0, lose: 0, tie:
 
         updateScoreElement();
         document.querySelector('.js-result').innerHTML = result;
-        document.querySelector('.js-move').innerHTML = `
-        You Pick
-        <img src="images/${playerMove}-emoji.png" class="move-icon"> 
-        <img src="images/${computerMove}-emoji.png" class="move-icon"> 
-        Computer Pick
-      `;
+        document.querySelector('.js-move').innerHTML = `You Pick
+        <img src="./images/${playerMove}-emoji.png" class="move-icon"> 
+        <img src="./images/${computerMove}-emoji.png" class="move-icon"> 
+        Computer Pick`;
 
 
 //       alert(`You Picked ${playerMove} The Computer Picked ${computerMove} The Result is ${result}
