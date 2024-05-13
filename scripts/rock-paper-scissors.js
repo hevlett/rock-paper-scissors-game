@@ -6,34 +6,34 @@ let score = JSON.parse(localStorage.getItem('score')) ?? { win: 0, lose: 0, tie:
 
     let computerMove = pickComputerMove();
     let result = '';
-    if(playerMove === 'scissors') {
+    if(playerMove === 'Scissors') {
 
-      if (computerMove === 'rock') {
+      if (computerMove === 'Rock') {
         result = 'You Lose!';
-      } else if (computerMove === 'paper') {
+      } else if (computerMove === 'Paper') {
         result = 'You WIn!';
-      } else if (computerMove === 'scissors') {
+      } else if (computerMove === 'Scissors') {
         result = 'Tie!'; }  
       }
 
-        else if (playerMove === 'paper') {
+        else if (playerMove === 'Paper') {
         
-          if (computerMove === 'rock') {
+          if (computerMove === 'Rock') {
           result = 'You WIn!'
-        } else if (computerMove === 'paper') {
+        } else if (computerMove === 'Paper') {
           result = 'Tie!'
-        } else if (computerMove === 'scissors') {
+        } else if (computerMove === 'Scissors') {
           result = 'You Lose!'
         }
       }
 
-       else if (playerMove === 'rock') {
+       else if (playerMove === 'Rock') {
 
-        if (computerMove === 'rock') {
+        if (computerMove === 'Rock') {
           result = 'Tie!'
-        } else if (computerMove === 'paper') {
+        } else if (computerMove === 'Paper') {
           result = 'You Lose!'
-        } else if (computerMove === 'scissors') {
+        } else if (computerMove === 'Scissors') {
           result = 'You WIn!'
         }
        }
@@ -73,11 +73,11 @@ let score = JSON.parse(localStorage.getItem('score')) ?? { win: 0, lose: 0, tie:
     const randomNumber = Math.random()
 
     if(randomNumber >= 0 && randomNumber <1/3) {
-      computerMove = 'rock';
+      computerMove = 'Rock';
     } else if(randomNumber >= 1/3 && randomNumber <1/2) {
-      computerMove = 'paper';
+      computerMove = 'Paper';
     } else if(randomNumber >= 1/2 && randomNumber <1) {
-      computerMove = 'scissors';
+      computerMove = 'Scissors';
     }
     return computerMove;
   }
